@@ -1,0 +1,17 @@
+@import "../node_modules/normalize.scss/normalize.scss";
+
+@import "../node_modules/slick-carousel/slick/slick.scss";
+@import "../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "../node_modules/jquery-fancybox/source/scss/jquery.fancybox.scss";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+@import "mixins";
+@import "variables";
+@import "common";
+@import "header";
+@import "menu";
+@import "slider";
+@import "main";
+@import "aside";
+@import "footer";
+

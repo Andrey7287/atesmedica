@@ -1,0 +1,29 @@
+{
+  "name": "atesmedica.ru",
+  "version": "1.0.0",
+  "description": "infodesign.ru",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Andrey7287/atesmedica.git"
+  },
+  "author": "Alekseev.A",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andrey7287/atesmedica/issues"
+  },
+  "homepage": "atesmedica.b.ifodesign.ru",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "jquery": "^3.0.0",
+    "jquery-fancybox": "^3.0.0",
+    "jquery.formstyler": "^1.7.5-repackage",
+    "normalize.scss": "^0.1.0",
+    "slick-carousel": "^1.6.0"
+  }
+}

@@ -1,0 +1,50 @@
+@mixin clearfix {
+  &:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+}
+
+@mixin simple-gradient($direction, $color1, $color1pos, $color2, $color2pos) {
+  background: $color1;
+  background: -webkit-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+  background: -moz-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+  background: -o-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+  background: -ms-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+  background: linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+}
+
+/*Descriptions
+$path - url to sprite img
+$width - width of the single image in target sprite
+$height - height of the single image
+$row and $cell - amount of rows and cells in sprite
+0 - eq. the first
+1 - second, etc
+( look at your sprite like it would be the table )*/
+
+@mixin sprite($path, $width, $height, $row, $cell) {
+  &::before {
+  content: "";
+  display: block;
+  width: $width+px;
+  height: $height+px;
+  background: url($path) (-$cell * $width)+px (-$row * $height)+px no-repeat;
+  }
+}
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+  @media (min-width: 1024px) { @content; }
+  }
+  @if $point == tablet {
+  @media (min-width: 768px) and (max-width: 1023px) { @content; }
+  }
+  @if $point == mobile {
+  @media (min-width: 480px) and (max-width: 767px ) { @content; }
+  }
+  @if $point == all-small {
+    @media (max-width: 1023px ) { @content; }
+  }
+}
