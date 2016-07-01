@@ -6596,5 +6596,15 @@ $row and $cell - amount of rows and cells in sprite
 /* Bkg colors */
 /* Color */
 /* Bootstrap */
+/*$container-desktop: (960px + $grid-gutter-width);
+$container-md: $container-desktop;
+
+$container-large-desktop: $container-desktop;
+$container-lg: $container-desktop;
+
+$grid-gutter-width: 14px;*/
+.slider {
+  max-width: 1200px;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=css.css.map */
