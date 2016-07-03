@@ -5,6 +5,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -357,6 +358,7 @@ td,
 th {
   padding: 0; }
 
+/*libs*/
 /* Slider */
 .slick-slider {
   position: relative;
@@ -6584,6 +6586,8 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+/*fonts*/
+/*styles*/
 /*Descriptions
 $path - url to sprite img
 $width - width of the single image in target sprite
@@ -6595,16 +6599,53 @@ $row and $cell - amount of rows and cells in sprite
 /* Fonts */
 /* Bkg colors */
 /* Color */
+/*Layout*/
 /* Bootstrap */
 /*$container-desktop: (960px + $grid-gutter-width);
-$container-md: $container-desktop;
 
 $container-large-desktop: $container-desktop;
-$container-lg: $container-desktop;
 
 $grid-gutter-width: 14px;*/
-.slider {
+body {
+  overflow-x: hidden;
+  font: normal 14px/22px "Open Sans", sans-serif;
+  color: #333; }
+
+.content-inner {
+  max-width: 1200px; }
+
+header {
+  text-transform: uppercase; }
+  header .site-logo {
+    margin-top: 10px; }
+  header .site-description__title {
+    font-size: 16px;
+    line-height: 48px;
+    text-align: justify;
+    color: #777;
+    padding-left: 7px; }
+  header .site-description__base {
+    color: #9cc280;
+    float: left;
+    padding-left: 7px; }
+  header .site-description__contacts {
+    float: right;
+    width: 41.6665%; }
+  header .site-description__mail {
+    float: left;
+    width: 60%;
+    text-align: right; }
+  header .site-description__phone {
+    float: right;
+    width: 40%;
+    text-align: right; }
+
+.slider-wrapp {
   max-width: 1200px;
   margin: 0 auto; }
+
+/* Catalog */
+.catalog {
+  max-width: 1200px; }
 
 /*# sourceMappingURL=css.css.map */

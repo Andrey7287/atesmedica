@@ -20,10 +20,11 @@
     "bootstrap-sass": "^3.3.6",
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
-    "jquery": "^3.0.0",
+    "jquery": "2.2.4", 
     "jquery-fancybox": "^3.0.0",
     "jquery.formstyler": "^1.7.5-repackage",
     "normalize.scss": "^0.1.0",
+    "requirejs": "^2.2.0",
     "slick-carousel": "^1.6.0"
   }
 }
