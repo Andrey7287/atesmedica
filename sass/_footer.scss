@@ -1,0 +1,19 @@
+footer {
+	position: relative;
+	.up {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 68px;
+		margin: -13px 0 0 -34px;
+		background: url(img/arrow.png) right 3px no-repeat;
+		a {
+			font: 700 14px $site-font;
+			color: #999;
+			text-decoration: underline;
+		}
+		a:hover {
+			text-decoration: none;
+		}
+	}
+}

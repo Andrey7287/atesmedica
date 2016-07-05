@@ -1,4 +1,81 @@
+.text-block {
+	height: 240px;
+	overflow: auto;
+}
 /* Catalog */
+@mixin head { 
+	padding: 10px 10px 10px 10px;
+	color: #fff;
+	font: 600 20px/30px $site-font;
+	text-transform: uppercase;
+	text-align: left;
+}
+
 .catalog {
 	max-width: $max-width;
+	@include clearfix;
+	&__title {
+		h2 {
+			font: 300 30px/22px $site-font;	
+			text-align: center;
+			margin: 50px 0 30px;
+		}
+	}
+	.catalog-list {
+		padding: 0;
+		&__title {
+			margin: 18px 0 16px -13px;
+			font: 600 20px/22px $site-font;
+		}
+		&__link {
+			font-size: 15px;
+			color: #333;
+			text-decoration: underline;
+		}
+	}
+
+	.lists-wrap-left {
+		background: #f7ffeb;
+		padding-left: 145px;
+	}
+	&__left {
+		width: 50%;
+		float: left;
+		padding-right: 6px;
+		.head {
+			@include head;
+			padding-left: 130px;
+			background: $title-green;
+		}
+		.catalog-list {
+			list-style-image: url(img/list-stile-green.png);
+			&__title,
+			&__link:hover {
+				color: $title-green;
+				text-decoration: none;
+			}
+		}
+	}
+	.lists-wrap-right {
+		background: #fbfdfe;
+		padding-left: 24px;
+	}
+	&__right {
+		width: 50%;
+		float: right;
+		padding-left: 6px;
+		.head {
+			@include head;
+			padding-right: 130px;
+			background: $title-blue;
+		}
+		.catalog-list {
+			list-style-image: url(img/list-stile-blue.png);
+			&__title,
+			&__link:hover {
+				color: $title-blue;
+				text-decoration: none;
+			}
+		}
+	}
 }

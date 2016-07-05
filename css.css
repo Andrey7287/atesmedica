@@ -6614,6 +6614,8 @@ body {
   overflow-x: hidden;
   font: normal 14px/22px "Open Sans", sans-serif;
   color: #333; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    color: #333; }
 
 .content-inner {
   max-width: 1200px;
@@ -6855,9 +6857,70 @@ nav.navbars {
     .navigator.active .navigator__title .head {
       color: #0a6886; }
 
+.text-block {
+  height: 240px;
+  overflow: auto; }
+
 /* Catalog */
 .catalog {
   max-width: 1200px; }
+  .catalog:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .catalog__title h2 {
+    font: 300 30px/22px "Open Sans", sans-serif;
+    text-align: center;
+    margin: 50px 0 30px; }
+  .catalog .catalog-list {
+    padding: 0; }
+    .catalog .catalog-list__title {
+      margin: 18px 0 16px -13px;
+      font: 600 20px/22px "Open Sans", sans-serif; }
+    .catalog .catalog-list__link {
+      font-size: 15px;
+      color: #333;
+      text-decoration: underline; }
+  .catalog .lists-wrap-left {
+    background: #f7ffeb;
+    padding-left: 145px; }
+  .catalog__left {
+    width: 50%;
+    float: left;
+    padding-right: 6px; }
+    .catalog__left .head {
+      padding: 10px 10px 10px 10px;
+      color: #fff;
+      font: 600 20px/30px "Open Sans", sans-serif;
+      text-transform: uppercase;
+      text-align: left;
+      padding-left: 130px;
+      background: #0f6939; }
+    .catalog__left .catalog-list {
+      list-style-image: url(img/list-stile-green.png); }
+      .catalog__left .catalog-list__title, .catalog__left .catalog-list__link:hover {
+        color: #0f6939;
+        text-decoration: none; }
+  .catalog .lists-wrap-right {
+    background: #fbfdfe;
+    padding-left: 24px; }
+  .catalog__right {
+    width: 50%;
+    float: right;
+    padding-left: 6px; }
+    .catalog__right .head {
+      padding: 10px 10px 10px 10px;
+      color: #fff;
+      font: 600 20px/30px "Open Sans", sans-serif;
+      text-transform: uppercase;
+      text-align: left;
+      padding-right: 130px;
+      background: #0a6886; }
+    .catalog__right .catalog-list {
+      list-style-image: url(img/list-stile-blue.png); }
+      .catalog__right .catalog-list__title, .catalog__right .catalog-list__link:hover {
+        color: #0a6886;
+        text-decoration: none; }
 
 aside {
   background: #f2f2f2;
@@ -6900,5 +6963,21 @@ aside {
       margin-right: 9px; }
       aside .brands__item:first-child {
         margin-right: 0; }
+
+footer {
+  position: relative; }
+  footer .up {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 68px;
+    margin: -13px 0 0 -34px;
+    background: url(img/arrow.png) right 3px no-repeat; }
+    footer .up a {
+      font: 700 14px "Open Sans", sans-serif;
+      color: #999;
+      text-decoration: underline; }
+    footer .up a:hover {
+      text-decoration: none; }
 
 /*# sourceMappingURL=css.css.map */
