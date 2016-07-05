@@ -1,8 +1,27 @@
 body {
-	overflow-x: hidden;
-	font: normal 14px/22px $site-font;
-	color: #333;
+  overflow-x: hidden;
+  font: normal 14px/22px $site-font;
+  color: #333;
 }
 .content-inner {
-	max-width: $max-width;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+.title {
+  color: $title-blue;
+}
+.title-green {
+  color: $title-green;
+}
+h2 {
+  font: 600 36px/29px $site-font;
+  text-transform: uppercase;
+}
+h3 {
+  font: 700 18px/22px $site-font;
+  text-transform: uppercase;
+}
+h4 {
+  font: 700 16px/16px $site-font;
+  text-transform: uppercase;
 }

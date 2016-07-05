@@ -6596,6 +6596,10 @@ $row and $cell - amount of rows and cells in sprite
 0 - eq. the first
 1 - second, etc
 ( look at your sprite like it would be the table )*/
+/*Ad hone line after title
+you have to wrap text by span before apply that
+for examp: <h2 class="target"><span><span><h2>*/
+/*small ---> 480px*/
 /* Fonts */
 /* Bkg colors */
 /* Color */
@@ -6612,7 +6616,26 @@ body {
   color: #333; }
 
 .content-inner {
-  max-width: 1200px; }
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.title {
+  color: #0a6886; }
+
+.title-green {
+  color: #0f6939; }
+
+h2 {
+  font: 600 36px/29px "Open Sans", sans-serif;
+  text-transform: uppercase; }
+
+h3 {
+  font: 700 18px/22px "Open Sans", sans-serif;
+  text-transform: uppercase; }
+
+h4 {
+  font: 700 16px/16px "Open Sans", sans-serif;
+  text-transform: uppercase; }
 
 header {
   text-transform: uppercase; }
@@ -6638,14 +6661,244 @@ header {
   header .site-description__phone {
     float: right;
     width: 40%;
-    text-align: right; }
+    text-align: right;
+    font: 600 16px "Open Sans", sans-serif;
+    color: #545454; }
 
-.slider-wrapp {
+/*
+Notice:
+
+Some styles and importants needs for rewrite bootstrap def
+
+*/
+nav.navbars {
+  width: calc(100% - 63px);
+  float: left;
+  background: none;
+  border: 0;
+  margin-top: 13px; }
+  nav.navbars .navbar-collapse {
+    padding: 0; }
+  nav.navbars .site-nav {
+    width: 100%; }
+    @media (min-width: 768px) {
+      nav.navbars .site-nav {
+        display: table; }
+        nav.navbars .site-nav__item {
+          display: table-cell;
+          float: none;
+          padding-right: 16px;
+          width: 25%; }
+          nav.navbars .site-nav__item.dropdown::after {
+            content: "";
+            display: table;
+            height: 15px;
+            width: 100%;
+            background: #5ea15a;
+            opacity: 0;
+            transition: all 0.3s; }
+          nav.navbars .site-nav__item:hover.dropdown::after {
+            opacity: 1; } }
+    nav.navbars .site-nav__link {
+      background: #e6f3d1;
+      text-align: center;
+      color: #0f6939 !important;
+      transition: all 0.3s;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      line-height: 15px;
+      white-space: nowrap; }
+      nav.navbars .site-nav__link.hovered {
+        background: #5ea15a !important;
+        color: #fff !important; }
+      nav.navbars .site-nav__link:focus {
+        outline: none;
+        background: #5ea15a !important;
+        color: #fff !important; }
+    nav.navbars .site-nav .dropdown-menu {
+      box-shadow: none;
+      border: 1px solid #5ea15a;
+      border-top: 5px solid #5ea15a; }
+
+.site-option {
+  width: 63px;
+  float: right;
+  margin-top: 18px; }
+  .site-option__search {
+    float: right; }
+    .site-option__search::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 21px;
+      background: url("img/option-sprite.png") 0px 0px no-repeat; }
+  .site-option__download {
+    float: right;
+    margin-left: 23px; }
+    .site-option__download::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 21px;
+      background: url("img/option-sprite.png") -20px 0px no-repeat; }
+    .site-option__download:before {
+      width: 15px; }
+
+.slider {
   max-width: 1200px;
   margin: 0 auto; }
+  .slider__item {
+    height: 360px; }
+
+.slider-first {
+  background: url(images/slider_easy.jpg) center center no-repeat; }
+  .slider-first__title {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 190px; }
+  .slider-first__left {
+    text-align: right; }
+  .slider-first__right {
+    text-align: center;
+    line-height: 16px;
+    color: #000;
+    white-space: nowrap; }
+
+/* Arrows */
+.slick-prev::before {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 40px;
+  background: url("img/arrows-sprite.png") 0px 0px no-repeat; }
+
+.slick-next::before {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 40px;
+  background: url("img/arrows-sprite.png") -23px 0px no-repeat; }
+
+.slick-prev,
+.slick-next {
+  z-index: 1; }
+
+.slick-next {
+  right: 32px; }
+
+.slick-prev {
+  left: 32px; }
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 0; }
+
+/* Dots */
+.slick-dots {
+  bottom: 5px; }
+  .slick-dots li button::before,
+  .slick-dots li.slick-active button:before {
+    opacity: 1; }
+  .slick-dots li button::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("img/slider-dots.png") -14px 0px no-repeat; }
+  .slick-dots li button:hover::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("img/slider-dots.png") 0px 0px no-repeat; }
+  .slick-dots li.slick-active button::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("img/slider-dots.png") 0px 0px no-repeat; }
+
+/* Preview nav ( slider bottom ) */
+.navigator {
+  height: 230px; }
+  .navigator--first {
+    background: url(images/preview_1.png) bottom left no-repeat, radial-gradient(ellipse at center, #ffffff 0%, #f9f9f9 29%, #f0f0f0 60%, #ebebeb 100%);
+    text-align: right; }
+    .navigator--first.active {
+      background: url(images/preview_1.png) bottom left no-repeat, radial-gradient(ellipse at center, #f2fcff 0%, #eefafe 25%, #e7f8fd 50%, #dff5fb 75%, #dbf4fb 100%); }
+  .navigator--second {
+    background: url(images/preview_2.png) bottom left no-repeat, radial-gradient(ellipse at center, #ffffff 0%, #f9f9f9 29%, #f0f0f0 60%, #ebebeb 100%);
+    text-align: center; }
+    .navigator--second.active {
+      background: url(images/preview_2.png) bottom left no-repeat, radial-gradient(ellipse at center, #f2fcff 0%, #eefafe 25%, #e7f8fd 50%, #dff5fb 75%, #dbf4fb 100%); }
+  .navigator--third {
+    background: url(images/preview_3.png) bottom left no-repeat, radial-gradient(ellipse at center, #ffffff 0%, #f9f9f9 29%, #f0f0f0 60%, #ebebeb 100%);
+    text-align: center; }
+    .navigator--third.active {
+      background: url(images/preview_3.png) bottom left no-repeat, radial-gradient(ellipse at center, #f2fcff 0%, #eefafe 25%, #e7f8fd 50%, #dff5fb 75%, #dbf4fb 100%); }
+  .navigator--fourth {
+    background: url(images/preview_4.png) bottom right no-repeat, radial-gradient(ellipse at center, #ffffff 0%, #f9f9f9 29%, #f0f0f0 60%, #ebebeb 100%);
+    text-align: left; }
+    .navigator--fourth.active {
+      background: url(images/preview_4.png) bottom right no-repeat, radial-gradient(ellipse at center, #f2fcff 0%, #eefafe 25%, #e7f8fd 50%, #dff5fb 75%, #dbf4fb 100%); }
+  .navigator__slide-block {
+    display: none; }
+  .navigator__title {
+    line-height: 18px;
+    color: #545454; }
+    .navigator__title .head {
+      font: 600 20px/29px "Open Sans", sans-serif;
+      color: #0f6939; }
+  .navigator.active .navigator__title {
+    color: #0a6886; }
+    .navigator.active .navigator__title .head {
+      color: #0a6886; }
 
 /* Catalog */
 .catalog {
   max-width: 1200px; }
+
+aside {
+  background: #f2f2f2;
+  margin: 30px 0 50px; }
+  aside .brands-wrap {
+    padding: 12px 0; }
+    aside .brands-wrap:after {
+      content: "";
+      display: table;
+      clear: both; }
+  aside .brands {
+    float: left;
+    width: calc(40% - 7px);
+    margin-left: 7px; }
+    aside .brands:first-child {
+      width: 20%;
+      margin-left: 0; }
+      aside .brands:first-child .brands__item {
+        margin-right: 18px; }
+        aside .brands:first-child .brands__item:first-child {
+          margin-right: 0; }
+    aside .brands__title {
+      font: 300 18px/18px "Open Sans", sans-serif;
+      color: #545454;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 15px; }
+      aside .brands__title span {
+        z-index: 2;
+        position: relative;
+        background: #f2f2f2; }
+      aside .brands__title:before {
+        bottom: 1px;
+        position: absolute;
+        z-index: 1;
+        color: #e8e8e8;
+        content: "________________________________________________________________________________________________________"; }
+    aside .brands__item {
+      float: right;
+      margin-right: 9px; }
+      aside .brands__item:first-child {
+        margin-right: 0; }
 
 /*# sourceMappingURL=css.css.map */

@@ -6,15 +6,6 @@
   }
 }
 
-@mixin simple-gradient($direction, $color1, $color1pos, $color2, $color2pos) {
-  background: $color1;
-  background: -webkit-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
-  background: -moz-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
-  background: -o-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
-  background: -ms-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
-  background: linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
-}
-
 /*Descriptions
 $path - url to sprite img
 $width - width of the single image in target sprite
@@ -34,17 +25,37 @@ $row and $cell - amount of rows and cells in sprite
   }
 }
 
-@mixin breakpoint($point) {
-  @if $point == desktop {
-  @media (min-width: 1024px) { @content; }
+/*Ad hone line after title
+you have to wrap text by span before apply that
+for examp: <h2 class="target"><span><span><h2>*/
+
+@mixin hone($background: #fff) {
+  overflow:hidden;
+  position:relative;
+  span {
+    z-index: 2;
+    position: relative;
+    background: $background;
   }
-  @if $point == tablet {
-  @media (min-width: 768px) and (max-width: 1023px) { @content; }
-  }
-  @if $point == mobile {
-  @media (min-width: 480px) and (max-width: 767px ) { @content; }
-  }
-  @if $point == all-small {
-    @media (max-width: 1023px ) { @content; }
+  &:before {
+    bottom: 1px;
+    position:absolute;
+    z-index: 1;
+    color: #e8e8e8;
+    content: "________________________________________________________________________________________________________";
   }
 }
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 992px) { @content; }
+  }
+  @if $point == tablet {
+    @media (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+  @if $point == tablet-desktop {
+    @media (min-width: 768px) { @content; }
+  }
+}
+
+/*small ---> 480px*/

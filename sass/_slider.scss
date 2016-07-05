@@ -1,7 +1,135 @@
-.slider-wrapp {
+.slider {
   max-width: $max-width;
   margin: 0 auto;
+  &__item {
+    height: 360px;
+  }
 }
-.slider {
-	
+
+.slider-first {
+  background: url(images/slider_easy.jpg) center center no-repeat;
+  //background-size: cover;
+  &__title {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 190px;
+  }
+  &__left {
+    text-align: right;
+  }
+  &__right {
+    text-align: center;
+    line-height: 16px;
+    color: #000;
+    white-space: nowrap;
+  }
+}
+
+/* Arrows */
+
+$arrows-url: 'img/arrows-sprite.png';
+
+.slick-prev {
+  @include sprite($arrows-url, 23, 40, 0, 0);
+}
+
+.slick-next {
+  @include sprite($arrows-url, 23, 40, 0, 1);
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
+
+.slick-next {
+  right: 32px;
+}
+
+.slick-prev {
+  left: 32px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 0; // del. default arrows
+}
+
+/* Dots */
+
+$dots-url: 'img/slider-dots.png';
+.slick-dots {
+  bottom: 5px;
+  li button::before,
+  li.slick-active button:before {
+    opacity: 1;
+  }
+  li button {
+    @include sprite($dots-url, 14, 14, 0, 1);
+  }
+  li button:hover {
+    @include sprite($dots-url, 14, 14, 0, 0);
+  }
+  li.slick-active button {
+    @include sprite($dots-url, 14, 14, 0, 0);
+  }
+}
+
+
+/* Preview nav ( slider bottom ) */
+
+.navigator {
+
+  $grey-gradient: radial-gradient(ellipse at center,  #ffffff 0%,#f9f9f9 29%,#f0f0f0 60%,#ebebeb 100%);
+  $blue-gradient: radial-gradient(ellipse at center,  #f2fcff 0%,#eefafe 25%,#e7f8fd 50%,#dff5fb 75%,#dbf4fb 100%);
+
+  height: 230px;
+  &--first {
+    background: url(images/preview_1.png) bottom left no-repeat, $grey-gradient;
+    text-align: right;
+    &.active {
+      background: url(images/preview_1.png) bottom left no-repeat, $blue-gradient;
+    }
+  }
+  &--second {
+    background: url(images/preview_2.png) bottom left no-repeat, $grey-gradient;
+    text-align: center;
+    &.active {
+      background: url(images/preview_2.png) bottom left no-repeat, $blue-gradient;
+    }
+  }
+  &--third {
+    background: url(images/preview_3.png) bottom left no-repeat, $grey-gradient;
+    text-align: center;
+    &.active {
+      background: url(images/preview_3.png) bottom left no-repeat, $blue-gradient;
+    }
+  }
+  &--fourth {
+    background: url(images/preview_4.png) bottom right no-repeat, $grey-gradient;
+    text-align: left;
+    &.active {
+      background: url(images/preview_4.png) bottom right no-repeat, $blue-gradient;
+    }
+  }
+  &__slide-block {
+    display: none;
+  }
+  &__title {
+    line-height: 18px;
+    color: $site-grey;
+    .head {
+      font: 600 20px/29px $site-font;
+      color: $title-green;
+    }
+  }
+  &.active {
+    .navigator__title {
+      color: $title-blue;
+      .head {
+        color: $title-blue;
+      }
+    }
+  }
 }
