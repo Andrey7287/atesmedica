@@ -1,19 +1,42 @@
 footer {
-	position: relative;
-	.up {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 68px;
-		margin: -13px 0 0 -34px;
-		background: url(img/arrow.png) right 3px no-repeat;
-		a {
-			font: 700 14px $site-font;
-			color: #999;
-			text-decoration: underline;
-		}
-		a:hover {
-			text-decoration: none;
-		}
-	}
+  background: $soft-grey;
+  margin-top: 73px;
+}
+.footer {
+  position: relative;
+  color: #777;
+  /* -= anchor =- */
+  .up {
+    position: absolute;
+    top: -40px;
+    left: calc(50% - 34px) ;
+    width: 68px;
+    background: url(img/arrow.png) right 3px no-repeat;
+    a {
+      font: 700 14px $site-font;
+      color: #999;
+      text-decoration: underline;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+  /* -= anchor =- */
+  &__contact {
+    text-align: center;
+    font: 300 14px/18px $site-font;
+    padding: 18px 5px 12px;
+  }
+  &__copy {
+    text-align: left;
+  }
+  &__infodesign {
+    text-align: right;
+  }
+  &__copy,
+  &__infodesign {
+    font: 300 10px/33px $site-font;
+    padding: 0 17px;
+    text-transform: uppercase;
+  }
 }
