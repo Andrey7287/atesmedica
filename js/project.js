@@ -35,10 +35,19 @@ define(['jquery', 'slick', 'bootstrap'], function(){
   var $sliderItems =$('.slider').find('slider__item');
   var $slideBlocks = $('#navigator-wrap').find('.navigator__slide-block');
   var $navigatorTitles = $('#navigator-wrap').find('.navigator__title');
+	var $sliders = $('.slider').add('.slider-production');
+	
+	function togleActiveSlider(){
+		$sliders.toggleClass('slider--active');
+	}
 
   function changeSlide(target){
     var targetNum = $(target).attr('data-num');
     $('.slider').slick('slickGoTo', targetNum);
+  };
+  function openProduction(target){
+    var targetNum = $(target).attr('data-production');
+    $('.slider-production').slick('slickGoTo', targetNum);
   };
 
   function openProduction(target){
@@ -54,27 +63,28 @@ define(['jquery', 'slick', 'bootstrap'], function(){
   function Toggle(e){
 
     $('.slider').slick('slickPause');
-
-    if ( $(e.target).attr('data-toggle') === "menu" ) { // navigator empty space
+		var target = $(e.target).attr('data-toggle');
+		
+    if ( target === "menu" ) { // navigator empty space
 
       closeMenu();
       $(e.target).find('.navigator__title').addClass('navigator__title--closed');
       $(e.target).find('.navigator__slide-block').slideDown();
 
-    } else if ( $(e.target).attr('data-toggle') === "slider" ||  $(e.target).parent().attr('data-toggle') === "slider") { // navigator title or dropdown navigation title
+    } else if ( target === "slider" ||  $(e.target).parent().attr('data-toggle') === "slider") { // navigator title or dropdown navigation title
 
       e.preventDefault();
       closeMenu();
       changeSlide(e.target);
+			togleActiveSlider();
 
-    } else if( $(e.target).attr('data-toggle').slice(0, 10) === "production" ){ //link in slide menu or dropdown navigation menu
+    } else if( target === "production" ){ //link in slide menu or dropdown navigation menu
 
       //console.log(e.target.href);
       e.preventDefault();
       changeSlide(e.target);
-      var href = $(e.target).attr('href');
-
-
+			openProduction(e.target);
+			togleActiveSlider();
     }
   };
 

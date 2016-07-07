@@ -5,6 +5,9 @@
   &__item {
     height: 360px;
   }
+	&--active {
+		z-index: 25;
+	}
 }
 
 .slider-first {
@@ -97,7 +100,19 @@ $dots-url: 'img/slider-dots.png';
   }
 }
 .slider-production {
+	&__item {
+		background: #daf3fa;
+	}
+}
 
+.production-list{
+	&__title {
+		font: 600 30px/30px $site-font;
+		color: $title-blue;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 22px 0;
+	}
 }
 
 

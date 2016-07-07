@@ -6774,6 +6774,9 @@ nav.navbars {
   .slider__item,
   .slider-production__item {
     height: 360px; }
+  .slider--active,
+  .slider-production--active {
+    z-index: 25; }
 
 .slider-first {
   background: url(images/slider_easy.jpg) center center no-repeat; }
@@ -6858,6 +6861,16 @@ nav.navbars {
     position: absolute;
     top: 0;
     width: 100%; }
+
+.slider-production__item {
+  background: #daf3fa; }
+
+.production-list__title {
+  font: 600 30px/30px "Open Sans", sans-serif;
+  color: #0a6886;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 22px 0; }
 
 /* NAVIGATTOR */
 .navigator {
