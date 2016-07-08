@@ -6639,6 +6639,13 @@ h4 {
   font: 700 16px/16px "Open Sans", sans-serif;
   text-transform: uppercase; }
 
+small {
+  font: normal 11px/22px "Open Sans", sans-serif;
+  color: #53717a; }
+
+a:focus {
+  text-decoration: none; }
+
 header {
   text-transform: uppercase; }
   header .site-logo {
@@ -6793,6 +6800,15 @@ nav.navbars {
     color: #000;
     white-space: nowrap; }
 
+.slider-second {
+  background: url(images/slider_easy.jpg) center center no-repeat; }
+
+.slider-third {
+  background: url(images/slider_easy.jpg) center center no-repeat; }
+
+.slider-fourth {
+  background: url(images/slider_easy.jpg) center center no-repeat; }
+
 /* Arrows */
 .slick-prev::before {
   content: "";
@@ -6853,8 +6869,7 @@ nav.navbars {
     height: 14px;
     background: url("img/slider-dots.png") 0px 0px no-repeat; }
 
-/* Preview nav ( slider bottom ) */
-/* SLIDER with production */
+/* SLIDER 2 ( with production ) */
 .slider-wrapp {
   position: relative; }
   .slider-wrapp .slider-production-wrap {
@@ -6871,6 +6886,28 @@ nav.navbars {
   text-align: center;
   text-transform: uppercase;
   padding: 22px 0; }
+.production-list__item {
+  margin-bottom: 22px; }
+.production-list .product {
+  background: #fff;
+  position: relative;
+  padding: 7px;
+  height: 100px; }
+  .production-list .product__title {
+    font: 700 18px/20px "Open Sans", sans-serif;
+    color: #0a6886; }
+    .production-list .product__title:hover {
+      color: #0f6939;
+      text-decoration: none; }
+  .production-list .product__description {
+    display: block;
+    font: normal 14px/16px "Open Sans", sans-serif;
+    color: #545454;
+    padding: 10px 0 5px; }
+  .production-list .product__img {
+    position: absolute;
+    right: 0;
+    top: -41px; }
 
 /* NAVIGATTOR */
 .navigator {

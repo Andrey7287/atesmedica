@@ -2,9 +2,9 @@ body {
   overflow-x: hidden;
   font: normal 14px/22px $site-font;
   color: #333;
-	h1,h2,h3,h4,h5,h6 {
-		color: #333;
-	}
+  h1,h2,h3,h4,h5,h6 {
+    color: #333;
+  }
 }
 .content-inner {
   max-width: $max-width;
@@ -27,4 +27,11 @@ h3 {
 h4 {
   font: 700 16px/16px $site-font;
   text-transform: uppercase;
+}
+small {
+  font: normal 11px/22px $site-font;
+  color: #53717a;
+}
+a:focus {
+  text-decoration: none;
 }
