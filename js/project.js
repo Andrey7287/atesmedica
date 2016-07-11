@@ -44,7 +44,8 @@ define(['jquery', 'slick', 'bootstrap', 'slimscroll'], function(){
   var sliderProduct = $('.slider-production').slick({
     autoplay: false,
     arrows: false,
-    draggable: false
+    draggable: false,
+    adaptiveHeight: true
   });
 
   /* Navigator & slide munus & Dropdown nav behavior */

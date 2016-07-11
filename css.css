@@ -6867,9 +6867,6 @@ nav.navbars {
 .slider-production {
   max-width: 1200px;
   margin: 0 auto; }
-  .slider__item,
-  .slider-production__item {
-    height: 360px; }
   .slider--active,
   .slider-production--active {
     z-index: 25; }
