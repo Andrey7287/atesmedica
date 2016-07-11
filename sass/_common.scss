@@ -17,7 +17,7 @@ body {
   color: $title-green;
 }
 h2 {
-  font: 600 36px/29px $site-font;
+  font: 600 36px/36px $site-font;
   text-transform: uppercase;
 }
 h3 {
@@ -35,3 +35,32 @@ small {
 a:focus {
   text-decoration: none;
 }
+.container {
+  @include breakpoint (tablet) {
+    width: auto;
+    min-width: 734px;
+    max-width: 973px;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+}
+
+button.navbar-toggle.default-btn {
+      background: #e6f3d1;
+      text-align: center;
+      color: $title-green!important;
+      transition: all 0.3s;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      line-height: 15px;
+      white-space: nowrap;
+      &:hover {
+        background: #5ea15a;
+        color: #fff!important;
+      }
+      &:focus {
+        outline: none;
+        background: #5ea15a!important;
+        color: #fff!important;
+      }
+    }

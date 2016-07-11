@@ -42,7 +42,7 @@ for examp: <h2 class="target"><span><span><h2>*/
     position:absolute;
     z-index: 1;
     color: #e8e8e8;
-    content: "________________________________________________________________________________________________________";
+    content: "_________________________________________________________________________________________________________________________________________________________________________________________________________________________________";
   }
 }
 
@@ -55,6 +55,12 @@ for examp: <h2 class="target"><span><span><h2>*/
   }
   @if $point == tablet-desktop {
     @media (min-width: 768px) { @content; }
+  }
+  @if $point == mobile {
+    @media (max-width: 767px) { @content; }
+  }
+  @if $point == mobile-tablet {
+    @media (max-width: 991px) { @content; }
   }
 }
 

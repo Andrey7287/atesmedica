@@ -1,8 +1,6 @@
 /*
 Notice:
-
 Some styles and importants needs for rewrite bootstrap def
-
 */
 
 nav.navbars {
@@ -11,6 +9,9 @@ nav.navbars {
   background: none;
   border: 0;
   margin-top: 13px;
+  @include breakpoint (mobile){
+    width: 100%;
+  }
   .navbar-collapse {
     padding: 0;
   }
@@ -74,6 +75,39 @@ nav.navbars {
         }
       }
     }
+    @include breakpoint (mobile) {
+      &__item {
+        .dropdown-menu {
+          text-transform: none;
+          box-shadow: none;
+          padding-bottom: 15px!important;
+          .slider-menu {
+            list-style: none;
+            padding: 0 9px;
+            text-align: center;
+            &__item:first-child {
+              border-bottom: 1px solid #f3fbfd;
+              padding: 16px 0 2px;
+              .slider-menu__link {
+                color: #2f6d4c;
+                font: 600 20px/20px $site-font;
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+            }
+            &__item {
+              padding-top: 13px;
+              .slider-menu__link {
+                display: block;
+                font: normal 16px/20px $site-font;
+                color: $title-blue;
+              }
+            }
+          }
+        }
+      }
+    }
 
     &__link {
       background: #e6f3d1;
@@ -98,21 +132,28 @@ nav.navbars {
 }
 
 .site-option {
-    width: 63px;
+  width: 63px;
+  float: right;
+  margin-top: 18px;
+  &__search {
+    @include sprite('img/option-sprite.png', 20, 21, 0, 0);
     float: right;
-    margin-top: 18px;
-    &__search {
-      @include sprite('img/option-sprite.png', 20, 21, 0, 0);
-      float: right;
-    }
-    &__download {
-      @include sprite('img/option-sprite.png', 20, 21, 0, 1);
-      float: right;
-      margin-left: 23px;
-      &:before {
-        width: 15px;
-      }
+  }
+  &__download {
+    @include sprite('img/option-sprite.png', 20, 21, 0, 1);
+    float: right;
+    margin-left: 23px;
+    &:before {
+      width: 15px;
     }
   }
-
-
+  @include breakpoint (mobile) {
+    position: absolute;
+    top: 0;
+    right: 90px;
+    margin-top: 30px;
+  }
+}
+.nav-wrap {
+  position: relative;
+}

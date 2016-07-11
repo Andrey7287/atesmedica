@@ -1,4 +1,4 @@
-define(['jquery', 'slick', 'bootstrap'], function(){
+define(['jquery', 'slick', 'bootstrap', 'slimscroll'], function(){
 
   $.fn.ravno = function () {
     var maxH = -1;
@@ -11,6 +11,22 @@ define(['jquery', 'slick', 'bootstrap'], function(){
 
   $('.ravno').ravno();
 
+  /* SLIMSCROLL */
+  $('#scroll').slimscroll({
+    railVisible: true,
+    alwaysVisible: true,
+
+  });
+  /* GET text-block titles positions */
+
+  var $titles = $('#scroll').find('h2');
+
+  function scrollText(num) {
+    var position = $titles[num].offsetTop;
+    $('#scroll').slimscroll({scrollTo: position + 'px'});
+  };
+
+
   /* SLIDER */
   var slider = $('.slider').slick({
     autoplay: false,
@@ -21,6 +37,7 @@ define(['jquery', 'slick', 'bootstrap'], function(){
     var navigators = $('#navigator-wrap').find('.navigator');
     $(navigators).removeClass('active');
     $(navigators[currentSlide]).addClass('active');
+    scrollText(currentSlide);
   });
 
   /* SLIDER with production */
@@ -50,6 +67,7 @@ define(['jquery', 'slick', 'bootstrap'], function(){
   function changeSlide(target){
     var targetNum = $(target).attr('data-num');
     $('.slider').slick('slickGoTo', targetNum);
+    scrollText (targetNum);
   };
   function openProduction(target){
     var targetNum = $(target).attr('data-production');
@@ -83,7 +101,6 @@ define(['jquery', 'slick', 'bootstrap'], function(){
       e.preventDefault();
       closeMenu();
       changeSlide(e.target);
-      console.log(target);
       togleActiveSlider(target);
 
     } else if( target === "production" ){ //link in slide menu or dropdown navigation menu

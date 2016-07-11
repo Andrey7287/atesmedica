@@ -3,11 +3,14 @@ $site-font: 'Open Sans', sans-serif;
 
 /* Bkg colors */
 $soft-grey: #f2f2f2;
+$grey-gradient: radial-gradient(ellipse at center,  #ffffff 0%,#f9f9f9 29%,#f0f0f0 60%,#ebebeb 100%);
+$blue-gradient: radial-gradient(ellipse at center,  #f2fcff 0%,#eefafe 25%,#e7f8fd 50%,#dff5fb 75%,#dbf4fb 100%);
 
 /* Color */
 $site-grey: #545454;
 $title-green: #0f6939;
 $title-blue: #0a6886;
+
 
 /*Layout*/
 $max-width: 1200px;

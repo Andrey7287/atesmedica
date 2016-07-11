@@ -2,6 +2,9 @@ header {
   text-transform: uppercase;
   .site-logo {
     margin-top: 10px;
+    @include breakpoint (mobile) {
+      text-align: center;
+    }
   }
   .site-description {
     &__title {
@@ -10,21 +13,46 @@ header {
       text-align: justify;
       color: #777;
       padding-left: 7px;
+      @include breakpoint (tablet) {
+        font-size: 10px;
+        text-align: left;
+      }
+      @include breakpoint (mobile) {
+        font-size: 10px;
+        text-align: center;
+        line-height: 22px;
+      }
     }
     &__base{
       color: #9cc280;
       float: left;
       padding-left: 7px;
+      @include breakpoint (mobile) {
+        font-size: 12px;
+        float: none;
+        text-align: center;
+      }
     }
     &__contacts {
       float: right;
       width: 41.6665%;
+      @include breakpoint (tablet) {
+        width: 61%;
+      }
+      @include breakpoint (mobile) {
+        float: none;
+        text-align: center;
+        width: 100%;
+      }
 
     }
     &__mail {
       float: left;
       width: 60%;
       text-align: right;
+      @include breakpoint (mobile){
+        width: auto;
+      }
     }
     &__phone {
       float: right;
@@ -32,6 +60,9 @@ header {
       text-align: right;
       font: 600 16px $site-font;
       color: $site-grey;
+      @include breakpoint (mobile){
+        width: auto;
+      }
     }
   }
 }
