@@ -46,11 +46,18 @@ nav.navbars {
           border: 1px solid #5ea15a;
           border-top: 5px solid #5ea15a;
           padding-bottom: 15px!important;
+          width: 974px;
+          @include breakpoint (tablet){
+            width: calc(100vw - 50px);
+          }
           .slider-menu {
             list-style: none;
             padding: 0 9px;
             &.first {
               padding-left: 27px;
+              @include breakpoint (tablet){
+                padding-left: 14px;
+              }
             }
             &__item:first-child {
               border-bottom: 1px solid #f3fbfd;
@@ -58,6 +65,9 @@ nav.navbars {
               .slider-menu__link {
                 color: #2f6d4c;
                 font: 600 20px/20px $site-font;
+                @include breakpoint (tablet){
+                  font-size: 16px;
+                }
                 &:hover {
                   text-decoration: none;
                 }
@@ -68,6 +78,9 @@ nav.navbars {
               .slider-menu__link {
                 display: block;
                 font: normal 16px/20px $site-font;
+                @include breakpoint (tablet) {
+                  font-size: 13px;
+                }
                 color: $title-blue;
               }
             }
@@ -75,6 +88,7 @@ nav.navbars {
         }
       }
     }
+
     @include breakpoint (mobile) {
       &__item {
         .dropdown-menu {

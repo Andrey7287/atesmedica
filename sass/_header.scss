@@ -58,10 +58,11 @@ header {
       float: right;
       width: 40%;
       text-align: right;
-      font: 600 16px $site-font;
+      font: 600 16px/22px $site-font;
       color: $site-grey;
       @include breakpoint (mobile){
         width: auto;
+        font-size: 14px;
       }
     }
   }

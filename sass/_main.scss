@@ -15,10 +15,10 @@
   max-width: $max-width;
   @include clearfix;
   &__title {
-    h2 {
-      font: 300 30px/22px $site-font;
+    .h1 {
       text-align: center;
       margin: 50px 0 30px;
+      text-transform: uppercase;
     }
   }
   /* -= styles for both sections =- */
@@ -41,23 +41,29 @@
   }
   /* -= styles for both sections =- */
   .lists-wrap-left {
-    background: #f7ffeb;
     padding-left: 130px;
-    @include breakpoint (tablet){
+    @include breakpoint (mobile-tablet){
       padding-left: 17px;
     }
     overflow: auto;
   }
   &__left {
-    width: 50%;
+    width: calc(50% - 6px);
     float: left;
-    padding-right: 6px;
+    margin-right: 6px;
+    background: #f7ffeb;
+    @include breakpoint (mobile){
+      width: 100%;
+    }
     .head {
       @include head;
       padding-left: 130px;
-      @include breakpoint (tablet) {
+      @include breakpoint (mobile-tablet) {
         padding-left: 17px;
         font-size: 16px;
+      }
+      @include breakpoint (mobile) {
+        text-align: center;
       }
       background: $title-green;
     }
@@ -73,19 +79,25 @@
     }
   }
   .lists-wrap-right {
-    background: #fbfdfe;
     padding-left: 10px;
     overflow: auto;
   }
   &__right {
-    width: 50%;
+    width: calc(50% - 6px);
     float: right;
-    padding-left: 6px;
+    margin-left: 6px;
+    background: #fbfdfe;
+    @include breakpoint (mobile){
+      width: 100%;
+    }
     .head {
       @include head;
-      @include breakpoint (tablet){
+      @include breakpoint (mobile-tablet){
         padding-right: 17px;
         font-size: 16px;
+      }
+      @include breakpoint (mobile){
+        text-align: center;
       }
       background: $title-blue;
     }

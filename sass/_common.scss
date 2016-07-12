@@ -16,15 +16,18 @@ body {
 .title-green {
   color: $title-green;
 }
-h2 {
+.h1 {
+  font: 300 30px $site-font;
+}
+.head2 {
   font: 600 36px/36px $site-font;
   text-transform: uppercase;
 }
-h3 {
+.head3 {
   font: 700 18px/22px $site-font;
   text-transform: uppercase;
 }
-h4 {
+.head4 {
   font: 700 16px/16px $site-font;
   text-transform: uppercase;
 }

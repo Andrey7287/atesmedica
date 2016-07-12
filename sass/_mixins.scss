@@ -59,6 +59,9 @@ for examp: <h2 class="target"><span><span><h2>*/
   @if $point == mobile {
     @media (max-width: 767px) { @content; }
   }
+  @if $point == small-mobile {
+    @media (max-width: 480px) { @content; }
+  }
   @if $point == mobile-tablet {
     @media (max-width: 991px) { @content; }
   }

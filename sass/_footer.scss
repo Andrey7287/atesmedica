@@ -38,5 +38,8 @@ footer {
     font: 300 10px/33px $site-font;
     padding: 0 17px;
     text-transform: uppercase;
+    @include breakpoint(mobile) {
+      line-height: 12px;
+    }
   }
 }
