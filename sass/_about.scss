@@ -1,0 +1,40 @@
+/* VECTORS */
+.vectors {
+  &__title {
+    font: 300 20px/22px $site-font;
+    margin-bottom: 8px;
+  }
+  &__list {
+    padding-left: 6px;
+  }
+}
+/* NEWS */
+.news {
+background: $soft-grey;
+  margin: 25px 0 25px;
+  .news-block {
+    padding: 20px 0 23px;
+    &__date {
+      font: 700 14px/22px $site-font;
+      color: #999;
+    }
+    &__link {
+      font: 400 14px/22px $site-font;
+      margin-bottom: 3px;
+    }
+    &__txt {
+      font: 300 13px/22px $site-font;
+    }
+  }
+}
+/* CONTACTS */
+.contacts {
+  margin-top: 10px;
+  &__item {
+    font-weight: 300;
+    margin: 0 0 13px;
+    &.brand {
+      font-size: 18px;
+    }
+  }
+}

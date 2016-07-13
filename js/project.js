@@ -181,4 +181,14 @@ define(['jquery', 'slick', 'bootstrap', 'slimscroll'], function(){
     }
   );
 
+  /*-= ABOUT =-*/
+
+  /* slider news */
+  var slider = $('.news-slider').slick({
+    autoplay: false,
+    adaptiveHeight: true
+  });
+
 });
+
+

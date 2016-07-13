@@ -310,3 +310,40 @@ $dots-url: 'img/slider-dots.png';
     }
   }
 }
+
+
+/* -= NEWS-SLIDER =- */
+
+/* Arrows */
+
+.about-wrap {
+  .slick-prev,
+  .slick-next {
+    opacity: 0.75;
+    transition: opacity 0.4s;
+    z-index: 1;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .slick-next {
+    right: -30px;
+    @include breakpoint (mobile-tablet) {
+      right: 7px;
+    }
+    &::before{
+      background: url("img/arrows-sprite-grey.png") -23px 0px no-repeat;
+    }
+  }
+
+  .slick-prev {
+    left: -30px;
+    @include breakpoint (mobile-tablet) {
+      left: 7px;
+    }
+    &::before{
+      background: url("img/arrows-sprite-grey.png") 0px 0px no-repeat;
+    }
+  }
+
+}

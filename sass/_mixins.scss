@@ -68,3 +68,25 @@ for examp: <h2 class="target"><span><span><h2>*/
 }
 
 /*small ---> 480px*/
+
+@mixin list($color: blue){
+  padding: 0;
+  list-style: none;
+  li {
+    padding: 5px 5px 5px 20px;
+    @if $color == blue {
+      background: url(img/list-stile-blue.png) 0 13px no-repeat;
+    }
+    @if $color == green {
+      background: url(img/list-stile-green.png) 0 13px no-repeat;
+    }
+    a {
+      font: 300 14px/16px $site-font;
+      color: #0a6886;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

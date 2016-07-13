@@ -2,10 +2,8 @@ requirejs.config({
   baseUrl: 'node_modules',
   shim: {
     'bootstrap': ['jquery'],
-    'slick': {
-      deps: ['jquery'],
-      export: 'jQuery.fn.slick'
-    }
+    'slick': ['jquery'],
+    'slimscroll': ['jquery']
   },
   paths: {
     'jquery': 'jquery/dist/jquery.min',

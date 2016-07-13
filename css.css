@@ -6614,8 +6614,15 @@ body {
   overflow-x: hidden;
   font: normal 14px/22px "Open Sans", sans-serif;
   color: #333; }
-  body h1, body h2, body h3, body h4, body h5, body h6 {
-    color: #333; }
+  body h1, body h2, body h3, body h4, body h5, body h6,
+  body .h1, body .h2, body .h3, body .h4, body .h5, body .h6 {
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  body p {
+    margin: 0 0 10px; }
+  body a {
+    color: #0a6886; }
 
 .content-inner {
   max-width: 1200px;
@@ -6628,7 +6635,9 @@ body {
   color: #0f6939; }
 
 .h1 {
-  font: 300 30px "Open Sans", sans-serif; }
+  text-transform: uppercase;
+  font: 300 30px "Open Sans", sans-serif;
+  text-align: center; }
 
 .head2 {
   font: 600 36px/36px "Open Sans", sans-serif;
@@ -6657,22 +6666,55 @@ a:focus {
     padding-left: 17px;
     padding-right: 17px; } }
 
+.default-button,
 button.navbar-toggle.default-btn {
   background: #e6f3d1;
   text-align: center;
   color: #0f6939 !important;
   transition: all 0.3s;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   line-height: 15px;
-  white-space: nowrap; }
+  white-space: nowrap;
+  text-transform: uppercase;
+  cursor: pointer; }
+  .default-button:hover,
   button.navbar-toggle.default-btn:hover {
     background: #5ea15a;
     color: #fff !important; }
+  .default-button:focus,
   button.navbar-toggle.default-btn:focus {
     outline: none;
     background: #5ea15a !important;
     color: #fff !important; }
+
+.list-blue {
+  padding: 0;
+  list-style: none; }
+  .list-blue li {
+    padding: 5px 5px 5px 20px;
+    background: url(img/list-stile-blue.png) 0 13px no-repeat; }
+    .list-blue li a {
+      font: 300 14px/16px "Open Sans", sans-serif;
+      color: #0a6886;
+      text-decoration: underline; }
+      .list-blue li a:hover {
+        text-decoration: none; }
+
+.list-green {
+  padding: 0;
+  list-style: none; }
+  .list-green li {
+    padding: 5px 5px 5px 20px;
+    background: url(img/list-stile-green.png) 0 13px no-repeat; }
+    .list-green li a {
+      font: 300 14px/16px "Open Sans", sans-serif;
+      color: #0a6886;
+      text-decoration: underline; }
+      .list-green li a:hover {
+        text-decoration: none; }
+
+.center {
+  text-align: center; }
 
 header {
   text-transform: uppercase; }
@@ -7149,6 +7191,31 @@ nav.navbars {
     .navigator.active .navigator__title .head {
       color: #0a6886; }
 
+/* -= NEWS-SLIDER =- */
+/* Arrows */
+.about-wrap .slick-prev,
+.about-wrap .slick-next {
+  opacity: 0.75;
+  transition: opacity 0.4s;
+  z-index: 1; }
+  .about-wrap .slick-prev:hover,
+  .about-wrap .slick-next:hover {
+    opacity: 1; }
+.about-wrap .slick-next {
+  right: -30px; }
+  @media (max-width: 991px) {
+    .about-wrap .slick-next {
+      right: 7px; } }
+  .about-wrap .slick-next::before {
+    background: url("img/arrows-sprite-grey.png") -23px 0px no-repeat; }
+.about-wrap .slick-prev {
+  left: -30px; }
+  @media (max-width: 991px) {
+    .about-wrap .slick-prev {
+      left: 7px; } }
+  .about-wrap .slick-prev::before {
+    background: url("img/arrows-sprite-grey.png") 0px 0px no-repeat; }
+
 .text-block {
   height: 240px;
   overflow: auto; }
@@ -7360,5 +7427,36 @@ footer {
     @media (max-width: 767px) {
       .footer__copy, .footer__infodesign {
         line-height: 12px; } }
+
+/* VECTORS */
+.vectors__title {
+  font: 300 20px/22px "Open Sans", sans-serif;
+  margin-bottom: 8px; }
+.vectors__list {
+  padding-left: 6px; }
+
+/* NEWS */
+.news {
+  background: #f2f2f2;
+  margin: 25px 0 25px; }
+  .news .news-block {
+    padding: 20px 0 23px; }
+    .news .news-block__date {
+      font: 700 14px/22px "Open Sans", sans-serif;
+      color: #999; }
+    .news .news-block__link {
+      font: 400 14px/22px "Open Sans", sans-serif;
+      margin-bottom: 3px; }
+    .news .news-block__txt {
+      font: 300 13px/22px "Open Sans", sans-serif; }
+
+/* CONTACTS */
+.contacts {
+  margin-top: 10px; }
+  .contacts__item {
+    font-weight: 300;
+    margin: 0 0 13px; }
+    .contacts__item.brand {
+      font-size: 18px; }
 
 /*# sourceMappingURL=css.css.map */
