@@ -1,0 +1,77 @@
+.contact-form {
+  margin: 7px 0 20px;
+  .form-block {
+    display: table;
+    width: 100%;
+    margin-bottom: 5px;
+    @include breakpoint(mobile){
+      display: block;
+    }
+    &__item {
+      display: table-cell;
+      text-align: right;
+      vertical-align: top;
+      @include breakpoint(mobile){
+        display: block;
+        width: auto;
+        text-align: left;
+      }
+      .form-checkbox {
+        text-align: left;
+        &__item {
+          text-align: left;
+          width: 17px;
+        }
+        label {
+          line-height: 14px;
+        }
+      }
+      input,
+      textarea{
+        width: 100%;
+        padding-left: 10px;
+      }
+      textarea{
+        height: 150px;
+      }
+      label {
+        padding-right: 12px;
+      }
+      &:first-child {
+        width: 195px;
+        @include breakpoint(mobile){
+          width: auto;
+        }
+      }
+      &--phone {
+        width: 80px;
+        @include breakpoint (mobile){
+          width: auto;
+        }
+      }
+      &--capcha {
+        label {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  .form-btn {
+    margin-top: 29px;
+    &__item {
+      padding: 13px 0;
+      display: block;
+      width: 295px;
+      margin: 0 auto;
+      font: 300 16px/22px $site-font;
+      background: #5ea15a;
+      color: #fff!important;
+      @include breakpoint (mobile){
+        width: 200px;
+      }
+      &:hover {
+        background: #0f6939;
+      }
+    }
+  }
+}

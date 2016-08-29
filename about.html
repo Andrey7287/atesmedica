@@ -79,13 +79,13 @@
                     </div>
                   </li>
                   <li class="site-nav__item">
-                    <a href="#" class="site-nav__link">каталог</a>
+                    <a href="/#catalog-anchor" class="site-nav__link">каталог</a>
                   </li>
                   <li class="site-nav__item">
                     <a href="about.html" class="site-nav__link">О компании</a>
                   </li>
                   <li class="site-nav__item">
-                    <a href="#" class="site-nav__link">контакты</a>
+                    <a href="#contacts-anchor" class="site-nav__link">контакты</a>
                   </li>
                 </ul>
               </div>
@@ -139,6 +139,8 @@
         <p>Наша компания обеспечивает гарантийное обслуживание приборов от одного года до трех лет, и постгарантийное обслуживание в течение всего срока эксплуатации приборов.</p>
         <p>За отдельную плату проводится обучение врачей методикам компьютерной электроэнцефалографии, электрокардиографии, эхоэнцефалоскопии, реографии и ультразвуковой денситометрии.</p>
       </div>
+
+      <!-- NEWS start  -->
       <div class="news">
         <div class="container">
           <div class="h1">новости</div>
@@ -213,9 +215,12 @@
           </div>
         </div>
       </div>
+      <!-- NEWS end  -->
 
       <!-- CONTACTS start -->
+      <a href="#" name="contacts-anchor"></a>
       <div class="h1">Контакты</div>
+
       <div class="container">
         <div class="row contacts">
           <div class="col-sm-4">
@@ -248,35 +253,78 @@
       <div class="container">
         <form action="#">
           <div class="contact-form">
+              <div class="form-block">
+                <div class="form-block__item">
+                  <label for="name">Имя или название фирмы<sup>*</sup></label>
+                </div>
+                <div class="form-block__item">
+                  <input type="text" id="name"/>
+                </div>
+              </div>
 
-               <input  class="contact-form__item" type="text" id="name"/>
-              <label for="name">Имя или название фирмы<sup>*</sup></label>
+              <div class="form-block">
+                <div class="form-block__item">
+                  <label for="mail">Электронная почта<sup>*</sup></label>
+                </div>
+                <div class="form-block__item">
+                  <input type="email" id="mail" />
+                </div>
+                <div class="form-block__item form-block__item--phone">
+                  <label for="phone">Телефон</label>
+                </div>
+                <div class="form-block__item">
+                  <input type="text" id="phone" />
+                </div>
+              </div>
+              <div class="form-block">
+                <div class="form-block__item">
+                  <label for="addr">Адрес</label>
+                </div>
+                <div class="form-block__item">
+                  <input  type="text" id="addr" />
+                </div>
+              </div>
 
-              <input  class="contact-form__item contact-form__item--short" type="email" id="mail" />
-              <label for="mail">Электронная почта<sup>*</sup></label>
+              <div class="form-block">
+                <div class="form-block__item">
+                  <label for="query">Запрос<sup>*</sup></label>
+                </div>
+                <div class="form-block__item">
+                  <textarea id="query"></textarea>
+                </div>
+              </div>
 
-              <input  class="contact-form__item contact-form__item--short" type="text" id="phone" />
-              <label for="phone">Телефон</label>
+              <div class="form-block">
+                <div class="form-block__item">
+                  <label class="form-block__item">Вы хотите получить ответ</label>
+                </div>
+                <div class="form-block__item">
+                  <div class="form-checkbox">
+                    <input type="checkbox" class="form-checkbox__item" name="email" id="chk-email" checked/>
+                    <label for="chk-email">Письмом на e-mail</label>
+                  </div>
+                  <div class="form-checkbox">
+                    <input type="checkbox" class="form-checkbox__item" name="phone" id="chk-phone"/>
+                    <label for="chk-phone">По телефону</label>
+                  </div>
+                  <div class="form-checkbox">
+                    <input type="checkbox" class="form-checkbox__item" name="mail" id="chk-mail"/>
+                    <label for="chk-mail">Почтой</label>
+                  </div>
+                </div>
 
-              <input  class="contact-form__item" type="text" id="addr" />
-              <label for="addr">Адрес</label>
+                <div class="form-block__item form-block__item--capcha">
+                  <label>Защита от автоматического заполнения</label>
+                </div>
+                <div class="form-block__item">
+                  <img src="img/tmp.jpg" alt="#" />
+                </div>
+              </div>
 
 
-              <textarea  class="contact-form__item" id="query"></textarea>
-              <label for="query">Запрос<sup>*</sup></label>
-
-              <img src="img/tmp.jpg" alt="#" />
-              <label for="query">Защита от автоматического заполнения</label>
-
-              <label for="choose">Вы хотите получить ответ</label>
-              <input type="checkbox" name="choose" value="email"/>
-              <input type="checkbox" name="choose" value="phone"/>
-              <input type="checkbox" name="choose" value="mail"/>
-
-
-
-
-            <span class="default-button" type="submit">отправить запрос</span>
+            <div class="form-btn">
+              <span class="default-button form-btn__item" type="submit">отправить запрос</span>
+            </div>
           </div>
         </form>
       </div>

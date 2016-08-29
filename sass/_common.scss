@@ -5,14 +5,16 @@ body {
   h1,h2,h3,h4,h5,h6,
   .h1,.h2,.h3,.h4,.h5,.h6{
     color: #333;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 0;
   }
   p {
     margin: 0 0 10px;
   }
   a {
     color: $title-blue;
+    &:focus {
+      text-decoration: none;
+    }
   }
 }
 .content-inner {
@@ -25,12 +27,62 @@ body {
 .title-green {
   color: $title-green;
 }
+.light {
+  font-weight: 300;
+}
+.semibold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.normal {
+  font-weight: 400;
+}
+.italic {
+  font-style: italic;
+}
 
-
-.h1 {
+h1, .h1 {
   text-transform: uppercase;
   font: 300 30px $site-font;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  &.inner {
+    color: #fff;
+    font-weight: 700;
+    line-height: 36px;
+    .head {
+      font-size: 46px;
+      line-height: 46px;
+    }
+  }
+  a {
+    border-bottom: 1px dashed $title-blue;
+    &:hover{
+      border: 0;
+      text-decoration: none;
+    }
+  }
+}
+h2, .h2 {
+  font: 300 24px/30px $site-font;
+  text-transform: uppercase;
+  text-align: center;
+  a {
+    border-bottom: 1px dashed $title-blue;
+    &:hover{
+      border: 0;
+      text-decoration: none;
+    }
+  }
+}
+.h2-notice {
+  font: normal 16px/22px $site-font;
+  font-style: italic;
+  text-align: center;
+  margin: 10px 0 -10px;
 }
 .head2 {
   font: 600 36px/36px $site-font;
@@ -48,8 +100,8 @@ small {
   font: normal 11px/22px $site-font;
   color: #53717a;
 }
-a:focus {
-  text-decoration: none;
+label {
+  font: 300 14px/30px $site-font;
 }
 .container {
   @include breakpoint (tablet) {
@@ -89,6 +141,35 @@ button.navbar-toggle.default-btn {
 .list-green {
   @include list(green);
 }
+.list-blue-big {
+  @include list(blue, big);
+}
+.list-green--big {
+  @include list(green, big);
+}
 .center {
   text-align: center;
+}
+.green {
+  color: $title-green!important;
+}
+
+.rub {
+  padding: 0 18px 0 4px;
+  background: url(img/rub.png) 100% 50% no-repeat;
+  color: $title-green;
+}
+.image-left {
+  float: left;
+  margin: 0 15px 20px 0;
+}
+.image-right {
+  float: right;
+  margin: 0 0 20px 15px;
+}
+sup {
+  color: #0c6080;
+  position: relative;
+  top: -2px;
+  font-size: 1.1em;
 }

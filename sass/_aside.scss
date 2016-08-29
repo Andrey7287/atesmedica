@@ -1,6 +1,9 @@
 aside {
   background: $soft-grey;
   margin: 30px 0 50px;
+  @include breakpoint(mobile-tablet){
+    display: none;
+  }
   .brands-wrap {
     @include clearfix;
     padding: 12px 0;

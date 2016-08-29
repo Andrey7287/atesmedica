@@ -2,10 +2,6 @@
 .vectors {
   &__title {
     font: 300 20px/22px $site-font;
-    margin-bottom: 8px;
-  }
-  &__list {
-    padding-left: 6px;
   }
 }
 /* NEWS */
@@ -27,6 +23,12 @@ background: $soft-grey;
     }
   }
 }
+
+#ymap {
+  margin-bottom: 28px;
+  height: 417px;
+}
+
 /* CONTACTS */
 .contacts {
   margin-top: 10px;

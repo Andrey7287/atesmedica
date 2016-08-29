@@ -53,6 +53,12 @@ header {
       @include breakpoint (mobile){
         width: auto;
       }
+      a {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
     &__phone {
       float: right;

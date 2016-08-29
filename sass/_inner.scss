@@ -1,0 +1,128 @@
+/*general layout*/
+
+.inner-block {
+  margin: 15px 0;
+  padding: 24px 0;
+  &--grey{
+    background: $soft-grey;
+  }
+}
+.inner-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  &--big {
+    font-size: 24px;
+    font-weight: 300;
+  }
+  a {
+    border-bottom: 1px dashed $title-blue;
+    &:hover{
+      border: 0;
+      text-decoration: none;
+    }
+  }
+}
+.cardio-presentation {
+  margin-bottom: 15px;
+  @include clearfix;
+}
+.container-descr {
+  width: 634px;
+  float: left;
+  &>p:not(.noinherit) {
+    font: normal 20px/30px $site-font;
+    padding-right: 10px;
+  }
+}
+.container-stock {
+  font: normal 14px/22px $site-font;
+  background: #ebf7fb;
+  padding: 14px 7px 1px;
+  margin-top: 30px;
+}
+.container-right {
+  float: right;
+  width: calc(100% - 634px);
+  position: relative;
+  @include clearfix;
+  img {
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    top: 5px;
+  }
+}
+/*general layout single blocks*/
+.inner-header {
+  background: url(images/atesmedical-ecg.jpg) 0 0 no-repeat;
+  background-size: cover;
+  &__head {
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    width: 825px;
+    padding: 15px 83px 8px;
+    margin: 0 auto;
+    p{
+      color: #fff;
+      font: 600 15px $site-font;
+      font-style: italic;
+      text-align: center;
+    }
+  }
+  &__descr {
+    font: normal 24px/30px $site-font;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  &__download {
+    text-align: right;
+    padding-bottom: 10px;
+    .download {
+      width: 95px;
+      padding-right: 30px;
+      margin-right: 5px;
+      display: inline-block;
+      background: url(img/download-icon.png) 100% 0 no-repeat;
+      &__item {
+        font: 600 17px/17px $site-font;
+        color: #fff;
+        text-align: left;
+        text-transform: uppercase;
+        &:first-child {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+.inner-page {
+  background: url(images/easy-ecg-print.png) 100% 0 no-repeat;
+  padding-top: 10px;
+  overflow: auto;
+}
+.inner-programm {
+  @include clearfix;
+  font-size: 18px;
+  &__item {
+    width: 26%;
+    margin-right: 7.3333%;
+    float: left
+  }
+  .items-wrapper {
+    @include clearfix;
+    margin: 30px 0 45px;
+  }
+  &__txt {
+    float: left;
+    width: 48%;
+  }
+  &__img {
+    float: right;
+    width: 52%;
+    text-align: right;
+    img {
+      margin-top: -10px;
+    }
+  }
+}
+
